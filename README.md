@@ -5,7 +5,7 @@
 - nest new docker-study
 
 ## create a Dockerfile
-- ddd
+- [Dockerfile](https://github.com/Docker-Study/James/blob/635122b36013bf12aabe7aa0cc6b963caf810614/Dockerfile)
 
 ## build an image with the Dockerfile
 - docker build -t up1912/docker-study:latest .
