@@ -20,13 +20,13 @@
 - docker ps
 
 ## stop a running container
-- docker stop <containerID> : gracefully stop
-- docker kill <containerID> : immediately stop
+- docker stop **_containerID_** : gracefully stop
+- docker kill **_containerID_** : immediately stop
 
 ## remove a stop container
-- docker rm <containerID>
+- docker rm **_containerID_**
 
 ## remove an image
-- docker rmi <imageID>
+- docker rmi **_imageID_**
 
 
