@@ -10,6 +10,14 @@
 ## build an image with the Dockerfile
 - docker build -t up1912/docker-study:latest .
 
+- result(_Building an Image is used only **FROM** and **RUN** keywords in the Dockerfile_)<br>
+<img width="908" alt="스크린샷 2021-10-24 오후 1 54 51" src="https://user-images.githubusercontent.com/78688891/138581375-28c5e8e0-7123-452e-8eb5-8918d080a388.png">
+
+
+- Docker desktop images
+<img width="1239" alt="스크린샷 2021-10-24 오후 1 56 14" src="https://user-images.githubusercontent.com/78688891/138581387-a96e1157-2173-4bfa-9b26-3f00af46aef4.png">
+
+
 ## check image list
 - docker images
 
