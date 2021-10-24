@@ -30,7 +30,10 @@
 ## check the container process status
 - **docker ps -a**
 <img width="1088" alt="스크린샷 2021-10-24 오후 2 35 05" src="https://user-images.githubusercontent.com/78688891/138582238-846206c0-1fb5-4913-a51d-c1eae89221d7.png">
+
 - **-a** : list all containers
+
+
 ## stop a running container
 - **docker stop _containerID_** : gracefully stop
 - **docker kill _containerID_** : immediately stop
