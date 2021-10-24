@@ -10,7 +10,7 @@
 ## build an image with the Dockerfile
 - **docker build -t up1912/docker-study:latest .**
 
-- Result (_Building an Image is used only **FROM** and **RUN** keywords in the Dockerfile_)<br>
+- Result (_Building an Image runs only **FROM** and **RUN** keywords in the Dockerfile_)<br>
 <img width="908" alt="스크린샷 2021-10-24 오후 1 54 51" src="https://user-images.githubusercontent.com/78688891/138581375-28c5e8e0-7123-452e-8eb5-8918d080a388.png">
 
 ## check image list
@@ -26,6 +26,12 @@
 - **-it** : Interactive Terminal -> creating an interactive bash shell in the container and going into the container 
 - **-p** : port binding HostPort:ContainerPort
 - **-d** : run in background mode
+
+<br><br>
+- **docker run -p 9999:9999 up1912/docker-study** (Now, it runs **CMD** keyword)
+<img width="854" alt="스크린샷 2021-10-24 오후 2 42 06" src="https://user-images.githubusercontent.com/78688891/138582384-8e53fe6e-6ce3-409c-852f-b86e16d307fd.png">
+
+
 
 ## check the container process status
 - **docker ps -a**
