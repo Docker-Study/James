@@ -7,7 +7,7 @@ WORKDIR /app
 # copy all from local to the Container's /app directory
 COPY . .
 
-RUN npm install
+RUN npm install # install node_modules based on what dependencies are in package.json
 RUN npm run build
 
 # caution : CMD ["npm run start"] is not allowed
