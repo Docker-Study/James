@@ -1,4 +1,5 @@
-# Base image
+# Base image size minimized
+# from node:10 -> 1.38GB to node:lts-alpine3.13 -> 400MB
 FROM node:lts-alpine3.13
 
 # set up where the container works
