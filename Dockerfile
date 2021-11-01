@@ -6,7 +6,7 @@ FROM node:lts-alpine3.13
 WORKDIR /app
 
 # copy all from local to the Container's /app directory
-COPY . .
+COPY package.json ./
 
 # install node_modules based on what dependencies are in package.json
 RUN npm install 
