@@ -2,7 +2,7 @@
 # from node:10 -> 1.38GB to node:lts-alpine3.13 -> 400MB
 FROM node:lts-alpine3.13
 
-# set up where the container works
+# set up where the container works.
 WORKDIR /app
 
 # copy package.json from local to the Container's ./ directory
