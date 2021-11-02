@@ -3,7 +3,8 @@
 FROM node:lts-alpine3.13
 
 # set up where the container works.
-WORKDIR /app
+# and where to keep source codes in the image
+WORKDIR /usr/src/app
 
 # copy package.json from local to the Container's ./ directory
 COPY ./ ./
