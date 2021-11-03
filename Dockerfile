@@ -6,7 +6,7 @@ FROM node:lts-alpine3.13
 # and where to keep source codes in the image
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json ./
 
 # install node_modules based on what dependencies are in package.json
 RUN npm install
