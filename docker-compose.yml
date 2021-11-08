@@ -1,0 +1,10 @@
+# connect and execute mutiple containers
+# using docker compose version 3
+version: "3"
+services:
+  redis-server:
+    image: "redis"
+  nest-app:
+    build: .
+    port:
+      - "9999:9999"
