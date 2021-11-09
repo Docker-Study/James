@@ -2,9 +2,52 @@
 # using docker compose version 3
 version: "3"
 services:
-  redis-server:
-    image: "redis"
-  nest-app:
+  backend:
+    container_name: james_backend
+    restart: always
     build: .
+    environment:
+      - APP_ENV=development
+      - APP_PORT=9999
+    volumes:
+      - /usr/src/app/node_modules
+      - ./:/usr/src/app 
+    working_dir: /usr/src/app
     ports:
       - "9999:9999"
+    links:
+      - mysql
+      - redis
+    depends_on:
+      - mysql
+      - redis
+  mysql:
+    container_name: james_mysql
+    restart: always
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=myapp
+      - MYSQL_PASSWORD=myapp
+      - MYSQL_DATABASE=myapp_docker
+    ports:
+      - "3306:3306"
+    volumes:
+      - james_mysql_data:/var/lib/mysql
+  redis:
+    container_name: james_redis
+    restart: always
+    image: redis:alpine
+    expose:
+      - "6379"
+    volumes:
+      - james_redis_data:/data
+
+volumes:
+  james_mysql_data:
+  james_redis_data:
+
+networks:
+  default:
+    external:
+      name: james
