@@ -6,7 +6,7 @@ import * as redisStore from 'cache-manager-ioredis';
 @Module({
   imports: [CacheModule.register({
     store: redisStore,
-    host: 'redis-server',
+    host: 'james_redis',
     post: 6379,
   })],
   controllers: [AppController],
