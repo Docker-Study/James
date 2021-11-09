@@ -2,7 +2,6 @@ import { CacheInterceptor, CACHE_MANAGER, Controller, Get, Inject, UseIntercepto
 import { AppService } from './app.service';
 import { Cache } from 'cache-manager';
 
-@UseInterceptors(CacheInterceptor)
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService,

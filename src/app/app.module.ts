@@ -6,7 +6,7 @@ import * as redisStore from 'cache-manager-ioredis';
 @Module({
   imports: [CacheModule.register({
     store: redisStore,
-    host: 'redis-docker-composer',
+    host: 'redis-server',
     post: 6379,
   })],
   controllers: [AppController],

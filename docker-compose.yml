@@ -6,5 +6,5 @@ services:
     image: "redis"
   nest-app:
     build: .
-    port:
+    ports:
       - "9999:9999"
