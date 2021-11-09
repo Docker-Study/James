@@ -5,13 +5,16 @@ services:
   backend:
     container_name: james_backend
     restart: always
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
     environment:
       - APP_ENV=development
       - APP_PORT=9999
     volumes:
       - /usr/src/app/node_modules
-      - ./:/usr/src/app 
+      - ./src:/usr/src/app/src
+      - ./test:/usr/src/app/test 
     working_dir: /usr/src/app
     ports:
       - "9999:9999"
@@ -31,7 +34,7 @@ services:
       - MYSQL_PASSWORD=myapp
       - MYSQL_DATABASE=myapp_docker
     ports:
-      - "3306:3306"
+      - "3308:3306"
     volumes:
       - james_mysql_data:/var/lib/mysql
   redis:
@@ -47,7 +50,7 @@ volumes:
   james_mysql_data:
   james_redis_data:
 
-networks:
-  default:
-    external:
-      name: james
+# networks:
+#   default:
+#     external:
+#       name: james
