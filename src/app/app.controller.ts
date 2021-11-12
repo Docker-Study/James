@@ -12,6 +12,8 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  // need to learn more about Redis cache
+  // why it loads a cache once, and reset as null?
   @Get("/cache")
   async getCache(): Promise<string> {
     const savedTime = await this.cacheManager.get<number>('time')
