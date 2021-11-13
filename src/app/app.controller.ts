@@ -24,4 +24,15 @@ export class AppController {
     await this.cacheManager.set<number>('time',now);
     return "save new time : " + now
   }
+
+  @Get("/test")
+  async test(): Promise<string> {
+    
+    const cacheTime = await this.cacheManager.set<number>('now', new Date().getTime());
+    const savedTime = await this.cacheManager.reset();
+
+    return "cache Time : " + cacheTime + ", saved Time : " + savedTime;
+
+  }
+
 }
