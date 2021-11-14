@@ -45,7 +45,14 @@ services:
       - "6379"
     volumes:
       - james_redis_data:/data
-
+tests:
+  build:
+    context: .
+    dockerfile: Dockerfile.dev
+  volumns:
+    - /usr/src/app/node_modules
+    - ./:/usr/src/app
+  command: ["npm", "run", "test"]
 volumes:
   james_mysql_data:
   james_redis_data:
